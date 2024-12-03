@@ -1,0 +1,219 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #B48B5D;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #3f2832;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 20px;
+}
+
+#refresh-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #3f2832;
+    margin-bottom: 20px;
+}
+
+#refresh-icon:hover {
+    color: #995750;
+}
+
+.ranking-content {
+    background-color: #995750;
+    border: 2px solid #3f2832;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.ranking-category {
+    margin: 20px;
+    background-color: #C9A77D;
+    border: 2px solid #3f2832;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.category-header h2 {
+    margin: 0;
+    width: calc(100% - 40px);
+    text-align: center;
+    font-family: "Press Start 2P", system-ui;
+    color: #3f2832;
+    font-size: 1.2em;
+    padding: 0 20px;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #3f2832;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    padding: 0;
+}
+
+.category-content {
+    display: none;
+    padding: 10px;
+    background-color: #ffd4a3;
+}
+
+.category-content.active {
+    display: block;
+}
+
+.table-container {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 2px solid #3f2832;
+    border-radius: 5px;
+    background-color: #ffd4a3;
+}
+
+.ranking-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 0;
+    background-color: #ffd4a3;
+    table-layout: fixed;
+}
+
+.ranking-table th, .ranking-table td {
+    border: 1px solid #3f2832;
+    padding: 8px;
+    text-align: center;
+    font-family: 'Neucha', cursive;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ranking-table th {
+    background-color: #C9A77D;
+    color: #3f2832;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 0.7em;
+}
+
+.ranking-table tr:nth-child(even) {
+    background-color: #FFE1B6;
+}
+
+.loading-text {
+    font-family: 'Press Start 2P', cursive;
+    color: #3f2832;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.error-text {
+    font-family: 'Press Start 2P', cursive;
+    color: #3f2832;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Estilo para a scrollbar */
+.table-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #C9A77D;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #3f2832;
+    border-radius: 5px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: #995750;
+}
+
+@media screen and (max-width: 768px) {
+    .category-header h2 {
+        font-size: 0.8em;
+        padding: 0 25px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    .toggle-btn {
+        font-size: 16px;
+    }
+}
+
+.csv-download {
+    color: #3f2832;
+    transition: color 0.3s ease;
+    font-size: 1.8em;
+    margin-top: 20px;
+    display: block;
+}
+
+.csv-download:hover {
+    color: #C9A77D;
+}
+
+.page-header {
+    border: 2px solid #3f2832;
+    background-color: #995750;
+    padding: 10px;
+}
+
+.header-top {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.zoom-effect {
+    transition: transform 0.3s ease;
+}
+
+.zoom-effect:hover {
+    transform: scale(1.1);
+}
+
+.ranking-category:first-child {
+    background-color: #995750;
+    margin-bottom: 30px;
+}
+
+.ranking-category:first-child .category-header {
+    cursor: default;
+}
+
+.ranking-category:first-child h2 {
+    color: #ffd4a3;
+    width: 100%;
+}
